@@ -1,0 +1,22 @@
+embedding_size: 64
+base_model: NeuMF
+mlp_hidden_size: [32, 16]
+dropout_prob: 0.1
+alpha: 0.5
+
+compute_tgf: True
+
+etrc_hidden_size: 128
+etrc_dropout: 0.2
+etrc_delta_tau: 0.001
+etrc_regression_weight: 0.05
+
+etrc_lambda_min: 0.0
+etrc_lambda_max: 1.0
+etrc_lambda_base: 0.0
+etrc_gate_temperature: 1.0
+
+etrc_noharm_weight: 0.0
+etrc_tgf_weight: 0.0
+etrc_noharm_margin: 0.0
+etrc_tgf_margin: 0.0

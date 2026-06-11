@@ -1,0 +1,9 @@
+compute_tgf: True
+metrics: ["NDCG", "Hit"]
+topk: [10, 20]
+valid_metric: NDCG@10
+
+# Keep this short for the first sanity check. Increase to 300 for the paper run.
+train_epochs: ["BOTH:50"]
+eval_step: 5
+stopping_step: 5

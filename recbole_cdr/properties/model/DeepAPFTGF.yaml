@@ -1,0 +1,7 @@
+embedding_size: 64
+beta: 1.0
+train_epochs: ["BOTH:300"]
+
+learning_rate: 0.001
+
+compute_tgf: True

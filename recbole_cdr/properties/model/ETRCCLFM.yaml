@@ -1,0 +1,30 @@
+learning_rate: 0.0005
+train_epochs: ["BOTH:300"]
+
+user_embedding_size: 64
+source_item_embedding_size: 64
+target_item_embedding_size: 64
+share_embedding_size: 16
+alpha: 0.1
+reg_weight: 0.0001
+
+compute_tgf: True
+
+etrc_num_classes: 3
+etrc_hidden_size: 128
+etrc_dropout: 0.2
+etrc_edl_weight: 0.05
+etrc_delta_reg_weight: 0.1
+etrc_kl_anneal_epochs: 10
+etrc_delta_tau: 0.001
+
+etrc_lambda_min: 0.0
+etrc_lambda_max: 1.0
+etrc_lambda_base: 0.0
+etrc_gate_temperature: 1.0
+etrc_harmful_penalty: 0.5
+
+etrc_noharm_weight: 0.0
+etrc_tgf_weight: 0.0
+etrc_noharm_margin: 0.0
+etrc_tgf_margin: 0.0

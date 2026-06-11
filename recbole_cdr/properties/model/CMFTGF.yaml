@@ -1,0 +1,9 @@
+learning_rate: 0.0005
+train_epochs: ["BOTH:300"]
+
+embedding_size: 64
+alpha: 0.1
+lambda: 0.1
+gamma: 0.1
+
+compute_tgf: True

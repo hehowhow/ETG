@@ -1,0 +1,29 @@
+embedding_size: 64
+n_layers: 2
+reg_weight: 1e-3
+lambda_source: 0.8
+lambda_target: 0.8
+connect_way: concat
+drop_rate: 0.3
+is_transfer: True
+
+compute_tgf: True
+
+etrc_num_classes: 3
+etrc_hidden_size: 128
+etrc_dropout: 0.2
+etrc_edl_weight: 0.05
+etrc_delta_reg_weight: 0.1
+etrc_kl_anneal_epochs: 10
+etrc_delta_tau: 0.001
+
+etrc_lambda_min: 0.0
+etrc_lambda_max: 1.0
+etrc_lambda_base: 0.0
+etrc_gate_temperature: 1.0
+etrc_harmful_penalty: 0.5
+
+etrc_noharm_weight: 0.0
+etrc_tgf_weight: 0.0
+etrc_noharm_margin: 0.0
+etrc_tgf_margin: 0.0

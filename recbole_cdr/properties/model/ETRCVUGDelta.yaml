@@ -1,0 +1,52 @@
+embedding_size: 64
+n_layers: 2
+reg_weight: 1e-3
+lambda_source: 0.8
+lambda_target: 0.8
+connect_way: concat
+drop_rate: 0.3
+is_transfer: True
+
+gen_weight: 0.1
+user_weight_attn: 0.5
+
+enhance_mode: "asrealsource"
+enhance_weight: 1.0
+
+compute_tgf: True
+
+etrc_num_classes: 3
+etrc_hidden_size: 128
+etrc_dropout: 0.2
+etrc_edl_weight: 0.05
+etrc_delta_reg_weight: 0.1
+etrc_kl_anneal_epochs: 10
+etrc_delta_tau: 0.001
+
+etrc_lambda_min: 0.0
+etrc_lambda_max: 1.0
+etrc_lambda_base: 0.0
+etrc_gate_temperature: 1.0
+etrc_harmful_penalty: 0.5
+
+etrc_noharm_weight: 0.0
+etrc_tgf_weight: 0.0
+etrc_noharm_margin: 0.0
+etrc_tgf_margin: 0.0
+
+# Delta label variants:
+#   etrc_delta_mode: loss | prob | margin | hybrid
+#   etrc_delta_mode: confidence_loss | ema_loss | shrink_loss | shrink_ema_loss
+#   etrc_delta_mode: shrink_ema_confidence_loss
+# Set etrc_delta_mode: custom and pass etrc_delta_signal / etrc_delta_label_strategy separately if needed.
+etrc_delta_mode: loss
+etrc_delta_conf_c: 0.01
+etrc_delta_shrinkage_kappa: 5.0
+etrc_delta_ema_momentum: 0.9
+etrc_delta_prior_momentum: 0.9
+etrc_delta_reg_clip: 1.0
+etrc_delta_hybrid_loss_weight: 1.0
+etrc_delta_hybrid_prob_weight: 1.0
+etrc_delta_hybrid_margin_weight: 0.0
+etrc_delta_loss_scale: 1.0
+etrc_delta_margin_scale: 1.0

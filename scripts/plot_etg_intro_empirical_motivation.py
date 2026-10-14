@@ -9,7 +9,8 @@ import numpy as np
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 ROOT = PROJECT_ROOT
-OUTPUT_DIR = PROJECT_ROOT / "generated" / "figures"
+RESULTS_DIR = PROJECT_ROOT / "results" / "main"
+OUTPUT_DIR = PROJECT_ROOT / "figures"
 
 TARGET_ONLY_COLOR = "#C9D7EA"
 TRANSFER_GAIN_COLOR = "#5CB8A8"
@@ -23,8 +24,8 @@ TIMES_FONT_PATH = Path("/usr/share/fonts/truetype/msttcorefonts/Times_New_Roman.
 PLOT_CONFIGS = {
     "dtcdr_amazon": {
         "dataset": "amazon",
-        "std_json": ROOT / "etrc_backbone_compare_results" / "dtcdrtgf_cross_dataset_repeatable_seed2022.json",
-        "etg_json": ROOT / "etrc_backbone_compare_results" / "etrcdtcdrlogit_cross_dataset_repeatable_seed2022.json",
+        "std_json": RESULTS_DIR / "dtcdrtgf_cross_dataset_repeatable_seed2022.json",
+        "etg_json": RESULTS_DIR / "etrcdtcdrlogit_cross_dataset_repeatable_seed2022.json",
         "subtitle_std": "DTCDR / Amazon",
         "subtitle_etg": "ETG-DTCDR / Amazon",
         "output_stem": "etg_intro_motivation_empirical",
@@ -32,8 +33,8 @@ PLOT_CONFIGS = {
     },
     "dtcdr_douban": {
         "dataset": "douban",
-        "std_json": ROOT / "etrc_backbone_compare_results" / "dtcdrtgf_cross_dataset_repeatable_seed2022.json",
-        "etg_json": ROOT / "etrc_backbone_compare_results" / "etrcdtcdrlogit_cross_dataset_repeatable_seed2022.json",
+        "std_json": RESULTS_DIR / "dtcdrtgf_cross_dataset_repeatable_seed2022.json",
+        "etg_json": RESULTS_DIR / "etrcdtcdrlogit_cross_dataset_repeatable_seed2022.json",
         "subtitle_std": "DTCDR / Douban",
         "subtitle_etg": "ETG-DTCDR / Douban",
         "output_stem": "etg_intro_motivation_empirical_dtcdr_douban",
@@ -41,8 +42,8 @@ PLOT_CONFIGS = {
     },
     "conet_epinions": {
         "dataset": "epinions",
-        "std_json": ROOT / "etrc_backbone_compare_results" / "conettgf_cross_dataset_repeatable_seed2022.json",
-        "etg_json": ROOT / "etrc_backbone_compare_results" / "etrcconet_cross_dataset_repeatable_seed2022.json",
+        "std_json": RESULTS_DIR / "conettgf_cross_dataset_repeatable_seed2022.json",
+        "etg_json": RESULTS_DIR / "etrcconet_cross_dataset_repeatable_seed2022.json",
         "subtitle_std": "CoNet / Epinions",
         "subtitle_etg": "ETG-CoNet / Epinions",
         "output_stem": "etg_intro_motivation_empirical_conet_epinions",
@@ -50,8 +51,8 @@ PLOT_CONFIGS = {
     },
     "mfgslae_amazon": {
         "dataset": "amazon",
-        "std_json": ROOT / "etrc_backbone_compare_results" / "mfgslaetgf_cross_dataset_repeatable_seed2022.json",
-        "etg_json": ROOT / "etrc_backbone_compare_results" / "etrcmfgslae_userlevel_cross_dataset_repeatable_seed2022.json",
+        "std_json": RESULTS_DIR / "mfgslaetgf_cross_dataset_repeatable_seed2022.json",
+        "etg_json": RESULTS_DIR / "etrcmfgslae_userlevel_cross_dataset_repeatable_seed2022.json",
         "subtitle_std": "MFGSLAE / Amazon",
         "subtitle_etg": "ETG-MFGSLAE / Amazon",
         "output_stem": "etg_intro_motivation_empirical_mfgslae_amazon",

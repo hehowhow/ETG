@@ -6,8 +6,8 @@ import numpy as np
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-VUG_CSV_PATH = PROJECT_ROOT / "etrc_vug_compare_results" / "etrc_vug_cross_dataset_summary_seed2022.csv"
-OUTPUT_DIR = PROJECT_ROOT / "generated" / "bar_charts"
+VUG_CSV_PATH = PROJECT_ROOT / "results" / "fairness" / "etrc_vug_cross_dataset_summary_seed2022.csv"
+OUTPUT_DIR = PROJECT_ROOT / "figures"
 
 ACCURACY_METRICS = [
     ("ndcg10", "NDCG@10"),

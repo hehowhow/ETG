@@ -1,0 +1,4 @@
+dataset,model,seed,best_valid_score,runtime_sec,ndcg10,ndcg20,hit10,hit20,overlap_ndcg10,overlap_ndcg20,non_overlap_ndcg10,non_overlap_ndcg20,ugf_ndcg10,ugf_ndcg20,ugf_hit10,ugf_hit20,tgf_ndcg10,tgf_ndcg20,tgf_hit10,tgf_hit20
+amazon,ETRCDTCDRLogit,2022,0.015,211.1,0.0158,0.0217,0.0483,0.0839,0.018,0.0237,0.0152,0.0212,0.0028,0.0025,0.0268,0.0411,0.0004,0.0015,0.0002,0.0038
+douban,ETRCDTCDRLogit,2022,0.0418,75.48,0.043,0.0536,0.1714,0.2719,0.0411,0.0494,0.0439,0.0555,0.0028,0.0061,0.1184,0.2071,0.0009,0.0004,0.0035,0.0204
+epinions,ETRCDTCDRLogit,2022,0.0454,16.29,0.0489,0.0654,0.1065,0.173,0.0545,0.0772,0.0466,0.0604,0.0079,0.0168,0.0183,0.0553,0.0022,0.0019,0.0013,0.0

@@ -1,0 +1,4 @@
+dataset,variant,model,description,seed,best_valid_score,runtime_sec,ndcg10,ndcg20,hit10,hit20,tgf_ndcg10,tgf_ndcg20,tgf_hit10,tgf_hit20
+amazon,etg_full,ETRCDTCDRLogit,three-state pseudo labels with evidential uncertainty,2022,0.015,361.05,0.0158,0.0217,0.0483,0.0839,0.0004,0.0015,0.0002,0.0038
+amazon,regression_only,ETRCDTCDRLogitReg,replace three-state pseudo labels with direct gain regression,2022,0.0172,283.63,0.014,0.0202,0.0474,0.0837,0.0004,0.0012,0.0,0.0072
+amazon,no_neutral,ETRCDTCDRLogitBinary,remove the centered neutral state and keep only helpful/harmful,2022,0.0132,243.65,0.0113,0.0163,0.0375,0.0691,0.0003,0.003,0.0024,0.0221

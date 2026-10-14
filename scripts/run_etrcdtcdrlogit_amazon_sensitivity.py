@@ -403,7 +403,7 @@ def main():
     parser.add_argument(
         "--output_dir",
         type=Path,
-        default=Path("etrc_sensitivity_results"),
+        default=ROOT_DIR / "results" / "sensitivity",
     )
     parser.add_argument(
         "--output_stem",
@@ -430,7 +430,7 @@ def main():
     args = parser.parse_args()
 
     split_path = shared_split_path(args.shared_split_dir, args.dataset, args.seed)
-    if not split_path.exists():
+    if not args.replot_only and not split_path.exists():
         raise FileNotFoundError(
             f"Shared dataloader split not found: {split_path}. "
             "Run scripts/prepare_shared_cross_domain_dataloaders.py first."
@@ -507,10 +507,12 @@ def main():
                 if config["delete_checkpoint_after_eval"] and os.path.exists(run_output["trainer"].saved_model_file):
                     os.remove(run_output["trainer"].saved_model_file)
 
+    figure_root = ROOT_DIR / "figures"
+    figure_root.mkdir(parents=True, exist_ok=True)
     plot_paths = {}
     for parameter_name, param_rows in rows_by_param.items():
         suffix = f"_{args.output_suffix}" if args.output_suffix else ""
-        plot_path = output_root / f"{args.output_stem}_{parameter_name}{suffix}_seed{args.seed}.png"
+        plot_path = figure_root / f"{args.output_stem}_{parameter_name}{suffix}_seed{args.seed}.png"
         make_plot(param_rows, parameter_name, SENSITIVITY_SPECS[parameter_name], plot_path, plot_style=args.plot_style)
         plot_paths[parameter_name] = plot_path
 

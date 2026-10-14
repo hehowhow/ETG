@@ -8,7 +8,8 @@ import numpy as np
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 ROOT = PROJECT_ROOT
-OUTPUT_DIR = PROJECT_ROOT / "generated" / "figures"
+RESULTS_DIR = PROJECT_ROOT / "results" / "main"
+OUTPUT_DIR = PROJECT_ROOT / "figures"
 
 TARGET_ONLY_COLOR = "#C9D7EA"
 TRANSFER_GAIN_COLOR = "#5CB8A8"
@@ -21,7 +22,7 @@ GRID_COLOR = "#D9DEE7"
 
 PLOT_CONFIGS = {
     "dtcdr_amazon": {
-        "data_json": ROOT / "etrc_backbone_compare_results" / "dtcdrtgf_cross_dataset_repeatable_seed2022.json",
+        "data_json": RESULTS_DIR / "dtcdrtgf_cross_dataset_repeatable_seed2022.json",
         "dataset": "amazon",
         "panel_title": "Standard CDR",
         "subtitle": "DTCDR / Amazon",
@@ -29,7 +30,7 @@ PLOT_CONFIGS = {
         "ylim": (0.0, 0.0195),
     },
     "etg_dtcdr_amazon": {
-        "data_json": ROOT / "etrc_backbone_compare_results" / "etrcdtcdrlogit_cross_dataset_repeatable_seed2022.json",
+        "data_json": RESULTS_DIR / "etrcdtcdrlogit_cross_dataset_repeatable_seed2022.json",
         "dataset": "amazon",
         "panel_title": "ETG-augmented CDR",
         "subtitle": "ETG-DTCDR / Amazon",
@@ -37,7 +38,7 @@ PLOT_CONFIGS = {
         "ylim": (0.0, 0.0202),
     },
     "mfgslae_amazon": {
-        "data_json": ROOT / "etrc_backbone_compare_results" / "mfgslaetgf_cross_dataset_repeatable_seed2022.json",
+        "data_json": RESULTS_DIR / "mfgslaetgf_cross_dataset_repeatable_seed2022.json",
         "dataset": "amazon",
         "panel_title": "Standard CDR",
         "subtitle": "MFGSLAE / Amazon",
@@ -45,7 +46,7 @@ PLOT_CONFIGS = {
         "ylim": (0.01, 0.0258),
     },
     "etg_mfgslae_amazon": {
-        "data_json": ROOT / "etrc_backbone_compare_results" / "etrcmfgslae_userlevel_cross_dataset_repeatable_seed2022.json",
+        "data_json": RESULTS_DIR / "etrcmfgslae_userlevel_cross_dataset_repeatable_seed2022.json",
         "dataset": "amazon",
         "panel_title": "ETG-augmented CDR",
         "subtitle": "ETG-MFGSLAE / Amazon",

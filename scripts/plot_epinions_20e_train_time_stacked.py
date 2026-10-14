@@ -6,8 +6,8 @@ import numpy as np
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-CSV_PATH = PROJECT_ROOT / "etrc_runtime_epinions_20e_combined" / "epinions_20e_no_earlystop_seed2022_combined.csv"
-OUTPUT_DIR = PROJECT_ROOT / "generated" / "runtime_figures"
+CSV_PATH = PROJECT_ROOT / "results" / "runtime" / "epinions_20e_no_earlystop_seed2022_combined.csv"
+OUTPUT_DIR = PROJECT_ROOT / "figures"
 
 BASE_METHODS = ["CLMF", "CoNet", "MFGSLAE", "DTCDR", "BiTGCF"]
 ETG_METHOD_MAP = {

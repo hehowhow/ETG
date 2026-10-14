@@ -8,8 +8,10 @@
 
 - `recbole_cdr/`: the main RecBole-CDR-based implementation, including backbone models and ETG variants.
 - `recbole_cdr/dataset/`: processed Amazon, Douban, and Epinions benchmark files used by the current project.
-- `checkpoint/shared_repeatable_splits/`: fixed shared dataloader splits for repeatable experiments.
+- `scripts/prepare_shared_cross_domain_dataloaders.py`: generates fixed shared dataloader splits locally under the ignored `checkpoint/` directory.
 - `scripts/`: experiment runners, analysis scripts, and figure-generation utilities.
+- `results/`: compact CSV/JSON artifacts used by the manuscript tables and empirical figures.
+- `figures/`: the figure assets referenced by the current manuscript.
 - `tests/`: lightweight smoke tests.
 
 ## Requirements
@@ -43,6 +45,17 @@ For repeatable cross-dataset experiments, use the scripts in [scripts](./scripts
 ```bash
 python scripts/run_etrcdtcdrlogit_cross_dataset_repeatable.py
 ```
+
+The manuscript plots can be regenerated from the committed result artifacts. For example:
+
+```bash
+python scripts/plot_etg_intro_single_panel_variants.py
+python scripts/plot_etg_bar_charts.py
+python scripts/run_etrcdtcdrlogit_amazon_sensitivity.py --replot_only
+python scripts/plot_epinions_20e_train_time_stacked.py
+```
+
+These scripts use repository-relative paths and write their outputs to `figures/`.
 
 ## Dataset Paths
 

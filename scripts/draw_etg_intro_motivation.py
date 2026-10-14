@@ -5,7 +5,7 @@ from pathlib import Path
 
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-OUTPUT_DIR = PROJECT_ROOT / "generated" / "figures"
+OUTPUT_DIR = PROJECT_ROOT / "figures"
 SVG_PATH = OUTPUT_DIR / "etg_intro_motivation.svg"
 PNG_PATH = OUTPUT_DIR / "etg_intro_motivation.png"
 

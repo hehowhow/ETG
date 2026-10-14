@@ -9,7 +9,8 @@ import numpy as np
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 ROOT = PROJECT_ROOT
-OUTPUT_DIR = PROJECT_ROOT / "generated" / "figures"
+RESULTS_DIR = PROJECT_ROOT / "results" / "main"
+OUTPUT_DIR = PROJECT_ROOT / "figures"
 
 TARGET_ONLY_COLOR = "#C9D7EA"
 TRANSFER_GAIN_COLOR = "#5CB8A8"
@@ -23,28 +24,28 @@ TIMES_FONT_PATH = Path("/usr/share/fonts/truetype/msttcorefonts/Times_New_Roman.
 
 PLOT_CONFIGS = {
     ("dtcdr", "amazon"): {
-        "data_json": ROOT / "etrc_backbone_compare_results" / "dtcdrtgf_cross_dataset_repeatable_seed2022.json",
+        "data_json": RESULTS_DIR / "dtcdrtgf_cross_dataset_repeatable_seed2022.json",
         "dataset": "amazon",
         "subtitle": "DTCDR / Amazon",
         "output_stem": "etg_intro_standard_cdr_single_panel",
         "ylim": 0.0228,
     },
     ("dtcdr", "douban"): {
-        "data_json": ROOT / "etrc_backbone_compare_results" / "dtcdrtgf_cross_dataset_repeatable_seed2022.json",
+        "data_json": RESULTS_DIR / "dtcdrtgf_cross_dataset_repeatable_seed2022.json",
         "dataset": "douban",
         "subtitle": "DTCDR / Douban",
         "output_stem": "etg_intro_standard_cdr_single_panel_douban",
         "ylim": 0.055,
     },
     ("mfgslae", "amazon"): {
-        "data_json": ROOT / "etrc_backbone_compare_results" / "mfgslaetgf_cross_dataset_repeatable_seed2022.json",
+        "data_json": RESULTS_DIR / "mfgslaetgf_cross_dataset_repeatable_seed2022.json",
         "dataset": "amazon",
         "subtitle": "MFGSLAE / Amazon",
         "output_stem": "etg_intro_standard_cdr_single_panel_mfgslae_amazon",
         "ylim": 0.027,
     },
     ("mfgslae", "douban"): {
-        "data_json": ROOT / "etrc_backbone_compare_results" / "mfgslaetgf_cross_dataset_repeatable_seed2022.json",
+        "data_json": RESULTS_DIR / "mfgslaetgf_cross_dataset_repeatable_seed2022.json",
         "dataset": "douban",
         "subtitle": "MFGSLAE / Douban",
         "output_stem": "etg_intro_standard_cdr_single_panel_mfgslae_douban",

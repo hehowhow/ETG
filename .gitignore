@@ -17,5 +17,6 @@ docs/build/
 wandb/*
 .DS_Store
 *.json
+!results/**/*.json
 */csv
 generated/
